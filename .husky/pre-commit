@@ -1,0 +1,8 @@
+echo "▶ pre-commit: eslint"
+pnpm lint || exit 1
+
+echo "▶ pre-commit: typecheck (tsc -b)"
+pnpm typecheck || exit 1
+
+echo "▶ pre-commit: build"
+pnpm build || exit 1

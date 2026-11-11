@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "importHelpers": true,
+    "isolatedModules": true,
+    "lib": ["es2022"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2022",
+    "baseUrl": ".",
+    "paths": {
+      "@app/api": ["libs/shared/api/src/index.ts"],
+      "@app/auth": ["libs/shared/auth/src/index.tsx"],
+      "@app/config": ["libs/shared/config/src/index.ts"],
+      "@app/forms": ["libs/shared/forms/src/index.ts"],
+      "@app/query": ["libs/shared/query/src/index.tsx"],
+      "@app/ui": ["libs/shared/ui/src/index.ts"],
+      "@app/ui/*": ["libs/shared/ui/src/*"],
+      "@app/utils": ["libs/shared/utils/src/index.ts"],
+      "@app/features-auth": ["libs/features/auth/src/index.tsx"],
+      "@app/features-client-shell": ["libs/features/client-shell/src/index.tsx"],
+      "@app/features-enterprise-admin": ["libs/features/enterprise-admin/src/index.tsx"],
+      "@app/features-ops": ["libs/features/ops/src/index.tsx"]
+    }
+  }
+}

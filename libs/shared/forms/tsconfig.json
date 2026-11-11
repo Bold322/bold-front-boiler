@@ -1,0 +1,14 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "declarationMap": true,
+    "jsx": "react-jsx",
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "outDir": "../../../dist/out-tsc/libs/shared/forms",
+    "rootDir": "src",
+    "tsBuildInfoFile": "../../../dist/out-tsc/libs/shared/forms/tsconfig.tsbuildinfo"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "references": []
+}

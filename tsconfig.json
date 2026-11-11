@@ -1,0 +1,46 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/client"
+    },
+    {
+      "path": "./apps/super-admin"
+    },
+    {
+      "path": "./libs/shared/api"
+    },
+    {
+      "path": "./libs/shared/auth"
+    },
+    {
+      "path": "./libs/shared/config"
+    },
+    {
+      "path": "./libs/shared/forms"
+    },
+    {
+      "path": "./libs/shared/query"
+    },
+    {
+      "path": "./libs/shared/ui"
+    },
+    {
+      "path": "./libs/shared/utils"
+    },
+    {
+      "path": "./libs/features/enterprise-admin"
+    },
+    {
+      "path": "./libs/features/ops"
+    },
+    {
+      "path": "./libs/features/auth"
+    },
+    {
+      "path": "./libs/features/client-shell"
+    }
+  ]
+}

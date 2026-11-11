@@ -1,0 +1,14 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "declarationMap": true,
+    "jsx": "react-jsx",
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "outDir": "../../../dist/out-tsc/libs/shared/auth",
+    "rootDir": "src",
+    "tsBuildInfoFile": "../../../dist/out-tsc/libs/shared/auth/tsconfig.tsbuildinfo"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "references": [{ "path": "../api" }]
+}

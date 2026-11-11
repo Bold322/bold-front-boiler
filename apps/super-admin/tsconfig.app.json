@@ -1,0 +1,34 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "declarationMap": true,
+    "outDir": "../../dist/out-tsc/apps/super-admin",
+    "rootDir": "src",
+    "tsBuildInfoFile": "../../dist/out-tsc/apps/super-admin/tsconfig.app.tsbuildinfo"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "references": [
+    {
+      "path": "../../libs/features/ops/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/shared/ui/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/shared/query/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/shared/config/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/features/auth/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/shared/auth/tsconfig.lib.json"
+    },
+    {
+      "path": "../../libs/shared/api/tsconfig.lib.json"
+    }
+  ]
+}

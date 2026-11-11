@@ -1,0 +1,43 @@
+{
+  "name": "super-admin",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/super-admin/src",
+  "projectType": "application",
+  "tags": ["scope:super-admin", "type:app"],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/super-admin",
+        "configFile": "apps/super-admin/vite.config.ts"
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "options": {
+        "buildTarget": "super-admin:build",
+        "configFile": "apps/super-admin/vite.config.ts"
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "options": {
+        "buildTarget": "super-admin:build",
+        "configFile": "apps/super-admin/vite.config.ts"
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "options": {
+        "configFile": "apps/super-admin/vite.config.ts"
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc -b apps/super-admin/tsconfig.app.json --pretty false"
+      }
+    }
+  }
+}

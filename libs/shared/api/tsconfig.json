@@ -1,0 +1,28 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "declarationMap": true,
+    "lib": [
+      "es2022",
+      "dom",
+      "dom.iterable"
+    ],
+    "outDir": "../../../dist/out-tsc/libs/shared/api",
+    "rootDir": "src",
+    "tsBuildInfoFile": "../../../dist/out-tsc/libs/shared/api/tsconfig.tsbuildinfo"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/**/*.spec.tsx"
+  ],
+  "references": [
+    {
+      "path": "../config"
+    }
+  ]
+}

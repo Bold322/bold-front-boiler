@@ -1,0 +1,7 @@
+{
+  "name": "shared-forms",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/forms/src",
+  "projectType": "library",
+  "tags": ["scope:shared", "type:forms"]
+}

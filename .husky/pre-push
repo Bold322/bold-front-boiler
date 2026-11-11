@@ -1,0 +1,24 @@
+echo "▶ pre-push: osv-scanner vulnerability scan"
+
+OSV="$(command -v osv-scanner || true)"
+if [ -z "$OSV" ]; then
+  for c in "$HOME/go/bin/osv-scanner" "$(go env GOPATH 2>/dev/null)/bin/osv-scanner" "/usr/local/bin/osv-scanner"; do
+    if [ -x "$c" ]; then OSV="$c"; break; fi
+  done
+fi
+
+if [ -z "$OSV" ]; then
+  echo "⚠ osv-scanner not installed — skipping vulnerability scan."
+  echo "  Install (recommended): go install github.com/google/osv-scanner/v2/cmd/osv-scanner@latest"
+  exit 0
+fi
+
+if ! "$OSV" scan source --lockfile=pnpm-lock.yaml; then
+  echo "✖ osv-scanner found known vulnerabilities — push blocked."
+  echo "  • bump the affected deps (pnpm up / overrides), or"
+  echo "  • record accepted advisories in osv-scanner.toml [[IgnoredVulns]], or"
+  echo "  • bypass once with: git push --no-verify"
+  exit 1
+fi
+
+echo "✓ pre-push: no known vulnerabilities"

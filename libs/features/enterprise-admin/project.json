@@ -1,0 +1,7 @@
+{
+  "name": "features-enterprise-admin",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/features/enterprise-admin/src",
+  "projectType": "library",
+  "tags": ["scope:client", "type:feature"]
+}

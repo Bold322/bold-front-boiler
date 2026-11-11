@@ -1,0 +1,21 @@
+# Don't ship the dev tree into the build context.
+node_modules
+**/node_modules
+.nx
+dist
+**/dist
+.git
+.github
+.vscode
+.idea
+.claude
+.DS_Store
+.env*
+**/.env*
+*.log
+README.md
+AGENTS.md
+CLAUDE.md
+vercel.json
+Dockerfile
+.dockerignore

@@ -1,0 +1,18 @@
+# Example container deploy: both SPAs behind any reverse proxy (Caddy, nginx,
+# Traefik) that routes to `client:80` and `super-admin:80` by service name.
+# Build the images with the root Dockerfile:
+#   docker build --build-arg APP=client      --build-arg VITE_API_BASE_URL=https://api.example.com -t app-client .
+#   docker build --build-arg APP=super-admin --build-arg VITE_API_BASE_URL=https://api.example.com -t app-super-admin .
+
+services:
+  client:
+    image: app-client:latest
+    restart: unless-stopped
+    ports:
+      - '8080:80'
+
+  super-admin:
+    image: app-super-admin:latest
+    restart: unless-stopped
+    ports:
+      - '8081:80'

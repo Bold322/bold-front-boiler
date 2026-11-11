@@ -1,0 +1,37 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "declarationMap": true,
+    "jsx": "react-jsx",
+    "lib": [
+      "es2022",
+      "dom",
+      "dom.iterable"
+    ],
+    "outDir": "../../../dist/out-tsc/libs/features/client-shell",
+    "rootDir": "src",
+    "tsBuildInfoFile": "../../../dist/out-tsc/libs/features/client-shell/tsconfig.tsbuildinfo"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "references": [
+    {
+      "path": "../../shared/utils"
+    },
+    {
+      "path": "../../shared/auth"
+    },
+    {
+      "path": "../../shared/query"
+    },
+    {
+      "path": "../../shared/ui"
+    },
+    {
+      "path": "../../shared/api"
+    }
+  ]
+}

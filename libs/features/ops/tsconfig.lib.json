@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true
+  },
+  "references": [
+    {
+      "path": "../../shared/query/tsconfig.lib.json"
+    },
+    {
+      "path": "../../shared/api/tsconfig.lib.json"
+    },
+    {
+      "path": "../../shared/ui/tsconfig.lib.json"
+    }
+  ]
+}

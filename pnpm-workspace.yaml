@@ -1,0 +1,27 @@
+packages:
+  - 'apps/*'
+  - 'libs/*/*'
+  - 'libs/features/*'
+  - 'packages/*'
+
+# Security floors for transitive deps (moved from package.json#pnpm.overrides).
+overrides:
+  '@babel/core@7': '^7.29.6'
+  'axios@1': '^1.15.2'
+  'brace-expansion@5': '^5.0.6'
+  'follow-redirects@1': '^1.16.0'
+  'form-data@4': '^4.0.6'
+  'hono@4': '^4.12.25'
+  'http-proxy-middleware@3': '^3.0.7'
+  'js-yaml@4': '^4.2.0'
+  'qs@6': '^6.15.2'
+  'tmp@0': '^0.2.6'
+  'undici@7': '^7.28.0'
+  'ws@8': '^8.20.1'
+  'yaml@2': '^2.8.3'
+
+# Packages allowed to run postinstall scripts.
+allowBuilds:
+  '@swc/core': true
+  nx: true
+  msw: true

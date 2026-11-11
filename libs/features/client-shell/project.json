@@ -1,0 +1,7 @@
+{
+  "name": "features-client-shell",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/features/client-shell/src",
+  "projectType": "library",
+  "tags": ["scope:client", "type:feature"]
+}
